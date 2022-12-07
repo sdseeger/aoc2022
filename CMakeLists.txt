@@ -38,3 +38,5 @@ add_puzzle(2b LIBRARIES parser)
 add_puzzle(3a LIBRARIES parser)
 add_puzzle(3b LIBRARIES parser)
 
+add_puzzle(4a LIBRARIES parser)
+add_puzzle(4b LIBRARIES parser)
