@@ -16,7 +16,8 @@ function(add_puzzle name)
 endfunction()
 
 function(add_lib name)
-    cmake_parse_arguments(ADD_LIB "" "" "LIBRARIES SOURCES" ${ARGN})
+    set(multi LIBRARIES SOURCES)
+    cmake_parse_arguments(ADD_LIB "" "" "${multi}" ${ARGN})
     add_library(${name} src/${name}.cpp)
     if(ADD_LIB_LIBRARIES)
         target_link_libraries(${name} PRIVATE ${ADD_LIB_LIBRARIES})
@@ -46,3 +47,7 @@ add_puzzle(5b LIBRARIES parser)
 
 add_puzzle(6a)
 add_puzzle(6b)
+
+add_lib(dentry dentry.cpp LIBRARIES parser)
+add_puzzle(7a LIBRARIES parser dentry)
+add_puzzle(7b LIBRARIES parser dentry)
