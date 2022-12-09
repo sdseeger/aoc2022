@@ -16,7 +16,6 @@ int main()
             return ((v>=l)&&(v<=r));
         };
 
-        //935 is too high
         if(f(vals[0], vals[2], vals[3])) ++total;
         else if(f(vals[1], vals[2], vals[3])) ++total;
         else if(f(vals[2], vals[0], vals[1])) ++total;
