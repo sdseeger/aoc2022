@@ -12,10 +12,11 @@
 #include "parser.hpp"
 
 using namespace aoc;
+using namespace aoc::dentry;
 
 int main()
 {
-    dentry root;
+    dentry::dentry root;
     parse_dentry(&root);
 
     uint32_t sum=0;

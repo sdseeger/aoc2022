@@ -12,12 +12,13 @@
 #include "parser.hpp"
 
 using namespace aoc;
+using namespace aoc::dentry;
 
 int main()
 {
     const uint32_t AVAIL = 70000000;
     const uint32_t NEED =  30000000;
-    dentry root;
+    dentry::dentry root;
     parse_dentry(&root);
 
     uint32_t outer=0;
