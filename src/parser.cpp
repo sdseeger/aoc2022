@@ -24,6 +24,17 @@ void parse(std::istream &is, const std::function<void(std::string)> &f)
     }
 }
 
+void parse_breakable(std::istream &is, const std::function<void(std::istringstream)> &f)
+{
+    try {
+        parse(is, f);
+    }
+    catch(break_exception &e) {}
+    catch(std::exception &e) {
+        std::cerr << "caught exception: " << e.what() << std::endl;
+    }
+}
+
 void parse_breakable(std::istream &is, const std::function<void(std::string)> &f)
 {
     try {
