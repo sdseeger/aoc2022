@@ -55,3 +55,6 @@ add_puzzle(7b LIBRARIES parser dentry)
 add_lib(trees trees.cpp LIBRARIES parser)
 add_puzzle(8a LIBRARIES parser trees)
 add_puzzle(8b LIBRARIES parser trees)
+
+add_puzzle(9a LIBRARIES parser)
+add_puzzle(9b LIBRARIES parser)
