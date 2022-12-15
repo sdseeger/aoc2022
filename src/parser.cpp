@@ -61,4 +61,22 @@ void parse(std::istream &is, int mod, const std::function<void(vs_t)> &f)
         }
     }
 }
+
+void parse(std::istream &is, int mod, const std::function<void(is_t)> &f, bool include_incomplete)
+{
+    std::string line;
+    int i=0;
+    is_t v;
+
+    while(std::getline(is, line)) {
+        v.emplace_back(line);
+        if(++i==mod) {
+            f(std::move(v));
+            v.clear();
+            i=0;
+        }
+    }
+
+    if(v.size()&&include_incomplete) f(std::move(v));
+}
 }

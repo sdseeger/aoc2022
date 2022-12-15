@@ -58,3 +58,9 @@ add_puzzle(8b LIBRARIES parser trees)
 
 add_puzzle(9a LIBRARIES parser)
 add_puzzle(9b LIBRARIES parser)
+
+add_puzzle(10a LIBRARIES parser)
+add_puzzle(10b LIBRARIES parser)
+
+add_puzzle(11a LIBRARIES parser)
+add_puzzle(11b LIBRARIES parser)
