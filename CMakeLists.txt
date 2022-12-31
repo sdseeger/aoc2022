@@ -68,3 +68,7 @@ add_puzzle(11b LIBRARIES parser)
 add_lib(elevation elevation.cpp LIBRARIES parser)
 add_puzzle(12a LIBRARIES parser elevation)
 add_puzzle(12b LIBRARIES parser elevation)
+
+add_lib(distress distress.cpp)
+add_puzzle(13a LIBRARIES distress parser)
+add_puzzle(13b LIBRARIES distress parser)

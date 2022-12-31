@@ -46,7 +46,7 @@ void parse_breakable(std::istream &is, const std::function<void(std::string)> &f
     }
 }
 
-void parse(std::istream &is, int mod, const std::function<void(vs_t)> &f)
+void parse(std::istream &is, int mod, const std::function<void(vs_t)> &f, bool include_incomplete)
 {
     std::string line;
     int i=0;
@@ -60,6 +60,8 @@ void parse(std::istream &is, int mod, const std::function<void(vs_t)> &f)
             i=0;
         }
     }
+
+    if(v.size()&&include_incomplete) f(std::move(v));
 }
 
 void parse(std::istream &is, int mod, const std::function<void(is_t)> &f, bool include_incomplete)
