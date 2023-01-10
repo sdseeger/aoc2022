@@ -37,6 +37,9 @@ namespace aoc {
 
         void parse(grid_t &grid, coord_t &mins, coord_t &maxs)
         {
+            maxs = {0, 0};
+            mins = {1000000, 1000000}; /* arbitrarily large */
+
             aoc::parse(std::cin, [&](std::istringstream istr) {
                 coord_t cs[2]; /* need two points to do anything */
                 coord_t cur;

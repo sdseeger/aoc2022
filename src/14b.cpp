@@ -7,8 +7,7 @@ using namespace aoc::sand;
 int main()
 {
     grid_t grid;
-    coord_t maxs{0,0};
-    coord_t mins{1000000,1000000};
+    coord_t mins, maxs;
 
     parse(grid, mins, maxs);
     std::cout << mins.first << ", " << mins.second << " :: " << maxs.first << ", " << maxs.second << std::endl;
