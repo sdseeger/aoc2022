@@ -76,3 +76,8 @@ add_puzzle(13b LIBRARIES distress parser)
 add_lib(sand sand.cpp)
 add_puzzle(14a LIBRARIES sand parser)
 add_puzzle(14b LIBRARIES sand parser)
+
+add_lib(sensors_beacons sensors_beacons.cpp)
+add_puzzle(15a LIBRARIES sensors_beacons parser)
+add_puzzle(15b LIBRARIES sensors_beacons parser)
+add_puzzle(15_vis LIBRARIES sensors_beacons parser)
